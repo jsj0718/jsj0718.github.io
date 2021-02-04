@@ -1,0 +1,7 @@
+User-agent: *
+
+Allow: /
+
+
+
+sitemap : https://jsj0718.github.io/sitemap.xml

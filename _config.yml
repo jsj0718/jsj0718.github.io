@@ -12,23 +12,23 @@
 
 # theme                  : "minimal-mistakes-jekyll"
 # remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+minimal_mistakes_skin    : "default" # 테마 색 설정 "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "en-US"
-title                    : "Site Title"
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
-description              : "An amazing website."
-url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+locale                   : "ko-KR"
+title                    : "JSJ0718 BLOG" # Meta 태그에 들어가는 영역, matched_title이 없으면 기본값으로 나옴
+title_separator          : "-" # 타이틀 사이 구분자, <title>Welcome to Jekyll | Minimal Mistakes</title> 해당 형식으로 들어감
+subtitle                 : "Version 1.0" # 타이틀 아래에 나올 작은 글씨, site tagline that appears below site title in masthead
+name                     : "정세진"
+description              : "Java를 비롯한 웹 프로그래밍을 공부하는 블로그" # Meta 태그에 들어가는 영역
+url                      : "https://jsj0718.github.io/" # Github 호스트 주소, the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
+repository               : "jsj0718/jsj0718.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+teaser                   : # 홈페이지 기본 티져 이미지, path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo                     : # 타이틀 옆에 작게 들어갈 이미지, path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : "기억보단 기록을 위한 Blog" # 홈페이지 최 상단에 들어갈 타이틀, overrides the website title displayed in the masthead, use " " for no title
+breadcrumbs              : true # 브래드크럼 사용 여부. true, false (default). data/ui-text.yml에 다국어 지원 가능
+words_per_minute         : 200 # 해당 포스트를 읽는데 걸리는 시간을 계산하기 위해 대략 분당 읽는 수가 몇 글자가 될지 적는 공간. 
 comments:
   provider               : # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
   disqus:
@@ -93,15 +93,15 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  name             : "Jeong Sejin"
+  avatar           : # 프로필 이미지, path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  bio              : "I am a Java Programmer"
+  location         : "Republic of Korea"
+  email            : "jeongsejin718@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+      # url: "mailto:jeongsejin718@gmail.com"
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -113,7 +113,7 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/jsj0718"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       # url: "https://instagram.com/"
@@ -121,6 +121,9 @@ author:
 # Site Footer
 footer:
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:jeongsejin718@gmail.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url:
@@ -129,7 +132,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/jsj0718"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -266,7 +269,7 @@ compress_html:
     envs: development
 
 
-# Defaults
+# Defaults (Post들에 적용될 기본 설정들)
 defaults:
   # _posts
   - scope:
@@ -276,6 +279,14 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: # true
+      comments: true
       share: true
       related: true
+
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
